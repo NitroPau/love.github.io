@@ -20,5 +20,5 @@ var interval = setInterval(function() {
 }, 250);
 }
 function zam() {
-document.getElementById("zamena").innerHTML = "<section><div class='container'><div class='row'><div class='col-12'><div><img style='width: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);' src='/cat.png'</div></div></div></div></section>";
+document.getElementById("zamena").innerHTML = "<section><div class='container'><div class='row'><div class='col-12'><div><img style='width: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);' src='/cat.png'</div></div></div></section>";
 }
