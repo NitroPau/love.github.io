@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <title>Love</title>
+  <script>
+    function makeConf() {
+    var duration = 15 * 1000;
+    var animationEnd = Date.now() + duration;
+    var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+  function randomInRange(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+  var interval = setInterval(function() {
+    var timeLeft = animationEnd - Date.now();
+    if (timeLeft <= 0) {
+      return clearInterval(interval);
+    }
+    var particleCount = 50 * (timeLeft / duration);
+    confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
+    confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
+  }, 250);
+  }
+  </script>
+</head>
+<body style="background-image: url(fon.png);" onload="makeConf()">
+  <main>
+    <section>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-12'>
+            <div>
+              <img style='width: 50%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);' src='cat.png'
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
+<script src ="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"> </script>
+</html>
