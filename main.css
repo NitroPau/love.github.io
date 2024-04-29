@@ -1,0 +1,12 @@
+body {
+  background-image: url(/photo/freestocks-Y9mWkERHYCU-unsplash.jpg);
+}
+.c1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.tg {
+  padding: 0 100px 0 100px;
+}
